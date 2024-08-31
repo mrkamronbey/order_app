@@ -1,0 +1,6 @@
+.center-block {
+  margin: 0 auto;
+  max-width: var(--layout-max-width);
+  padding: 0 clamp(0.625rem, 1.307vw + 0.306rem, 1.875rem);
+  width: 100%;
+}

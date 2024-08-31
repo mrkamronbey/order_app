@@ -1,0 +1,34 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run linting
+yarn lint
+
+# Check types
+yarn types
+
+# Format code
+yarn format
+
+# Fix style css, scss, sass
+yarn stylelint
+# STYLELINT_EXIT_CODE=$?
+
+# if [ $STYLELINT_EXIT_CODE -ne 0 ]; then
+#   echo "Stylelint found issues. Do you want to automatically fix them? (y/n)"
+#   read -r answer
+#   if [ "$answer" = "y" ]; then
+#     yarn stylelint:fix
+#   else
+#     echo "You need to fix stylelint issues manually before committing."
+#     exit 1
+#   fi
+# fi
+
+# Check if there are any changes
+if git diff --staged --quiet; then
+  echo "No changes to commit after formatting."
+  exit 1
+fi
+
+exit 0

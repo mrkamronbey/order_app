@@ -1,0 +1,51 @@
+:root {
+  /* brand  */
+  --brand: #39d1227d;
+  --brand-secondary: color-mix(in srgb, var(--brand) 10%, #fff);
+  --brand-secondary-hover: color-mix(in srgb, var(--brand) 30%, #fff);
+  --brand-dark: color-mix(in srgb, var(--brand) 80%, #000);
+  --brand-light: color-mix(in srgb, var(--brand) 80%, #fff);
+  --brand-lighter: color-mix(in srgb, var(--brand) 20%, #fff);
+
+  /* text  */
+  --text: #000;
+  --text-brand: #3e3e3e;
+  --text-secondary: #828282;
+
+  /* additional */
+  --info: #80d5ff;
+  --danger: #f00;
+  --separator: #8c81f21a;
+  --yellow: #fff07d;
+  --yellow-light: #fff07d1a;
+  --white: #fff;
+  --green: rgb(84 237 156);
+  --green-light: rgb(84 237 156 / 10%);
+
+  /* hover */
+  --white-hover: #f8f8f8;
+  --link-hover: color-mix(in srgb, var(--brand) 70%, #000);
+
+  /* background */
+  --public-bg: #eef2f5;
+
+  /* Badge */
+  --badge: #ff8870;
+
+  /* layout */
+  --layout-bg: #f9f9f9;
+  --layout-gap: 32px;
+  --layout-gap-botton: clamp(1.25rem, 3.472vw - 0.417rem, 3.75rem);
+  --layout-gap-mobile: 12px;
+  --layout-header: 77px;
+  --layout-max-width: 1320px;
+
+  /* fForm field */
+  --field-border-radius: 100px;
+  --field-padding-top: 11px;
+  --field-padding-left: 20px;
+
+  /* border radius */
+  --border-radius: 20px;
+  --border-color: #dcdcdc;
+}
