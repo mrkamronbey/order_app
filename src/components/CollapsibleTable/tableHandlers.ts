@@ -13,7 +13,7 @@ export const handleRequestSort = (
   setOrderBy(property)
 }
 
-export const handleChangePage = (event: unknown, newPage: number, setPage: Dispatch<SetStateAction<number>>) => {
+export const handleChangePage = (_event: unknown, newPage: number, setPage: Dispatch<SetStateAction<number>>) => {
   setPage(newPage)
 }
 

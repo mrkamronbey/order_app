@@ -11,7 +11,7 @@ type MessageProps = {
 }
 
 export const Message: React.FC<MessageProps> = ({ openMessage, setOpenMessage, message, messageType }) => {
-  const handleClose = (event?: React.SyntheticEvent | Event, reason?: SnackbarCloseReason) => {
+  const handleClose = (_event?: React.SyntheticEvent | Event, reason?: SnackbarCloseReason) => {
     if (reason === 'clickaway') {
       return
     }
