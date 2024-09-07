@@ -20,7 +20,7 @@
     "types": "tsc --noEmit",
     "sort:packages": "node scripts/sortPackages.mjs",
     "check-versions": "node scripts/checkPackageVersions.mjs",
-    "postinstall": "npm run check-versions"
+    "postinstall": "yarn run check-versions"
   },
   "husky": {
     "hooks": {
@@ -65,7 +65,7 @@
     "usehooks-ts": "3.1.0"
   },
   "devDependencies": {
-    "@types/js-cookie": "^3.0.6",
+    "@types/js-cookie": "3.0.6",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "@types/react-input-mask": "3.0.5",
