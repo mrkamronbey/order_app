@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   /* brand  */
-  --brand: #09C60D;
+  --brand: #09c60d;
   --brand-secondary: color-mix(in srgb, var(--brand) 10%, #fff);
   --brand-secondary-hover: color-mix(in srgb, var(--brand) 30%, #fff);
   --brand-dark: color-mix(in srgb, var(--brand) 80%, #000);
@@ -20,7 +20,7 @@
   --yellow: #fff07d;
   --yellow-light: #fff07d1a;
   --white: #fff;
-  --green: #00E091;
+  --green: #00e091;
   --green-light: rgb(84 237 156 / 10%);
 
   /* hover */
