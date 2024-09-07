@@ -1,6 +1,8 @@
 import React from 'react'
-import { IconButton } from '@mui/material'
+import { IconButton, IconButtonProps } from '@mui/material'
 import { ActionType } from '@/types'
+
+type ActionColor = IconButtonProps['color'] | undefined
 
 interface ActionsProps {
   row: any
@@ -12,8 +14,8 @@ export const ActionsButton: React.FC<ActionsProps> = ({ row, actions }) => (
     {actions?.map((action, index) => (
       <IconButton
         sx={{ mr: 2 }}
-        key={Number(index)}
-        color={action.color || 'primary'}
+        key={index}
+        color={(action.color as ActionColor) || 'primary'}
         onClick={() => action.action(row.id)}
       >
         {action.icon}
