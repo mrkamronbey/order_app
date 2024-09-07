@@ -1,28 +1,25 @@
+import { useMemo } from 'react'
 import { useRoutes } from 'react-router-dom'
+import Cookies from 'js-cookie'
 import { ROUTES } from '@/constants'
-import { About, Home, Login, NotFound, Register } from './lazy'
+import { Dashboard, Login, NotFound, Order, Products } from './lazy'
 import { ProtectedRoutes, PublicRoutes } from './routes'
 import { SuspenseWrapper } from './SuspenseWrapper'
-import { RoutesAuthProps } from './types'
 
-export const Router = ({ isAuth }: RoutesAuthProps) =>
-  useRoutes([
+export const Router = () => {
+  const token = Cookies.get('authToken')
+
+  const isAuth = useMemo(() => !!token, [token])
+
+  return useRoutes([
     {
-      element: <PublicRoutes isAuth={isAuth} />,
+      element: <PublicRoutes isAuth={!isAuth} />,
       children: [
         {
           path: ROUTES.login,
           element: (
             <SuspenseWrapper>
               <Login />
-            </SuspenseWrapper>
-          ),
-        },
-        {
-          path: ROUTES.register,
-          element: (
-            <SuspenseWrapper>
-              <Register />
             </SuspenseWrapper>
           ),
         },
@@ -35,15 +32,23 @@ export const Router = ({ isAuth }: RoutesAuthProps) =>
           path: ROUTES.home,
           element: (
             <SuspenseWrapper>
-              <Home />
+              <Dashboard />
             </SuspenseWrapper>
           ),
         },
         {
-          path: ROUTES.about,
+          path: ROUTES.orders,
           element: (
             <SuspenseWrapper>
-              <About />
+              <Order />
+            </SuspenseWrapper>
+          ),
+        },
+        {
+          path: ROUTES.products,
+          element: (
+            <SuspenseWrapper>
+              <Products />
             </SuspenseWrapper>
           ),
         },
@@ -58,3 +63,4 @@ export const Router = ({ isAuth }: RoutesAuthProps) =>
       ),
     },
   ])
+}

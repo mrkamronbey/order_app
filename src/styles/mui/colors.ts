@@ -1,4 +1,4 @@
 export const colors = {
-  brand: '#f25e06',
-  brandHover: '#f6802f',
+  brand: '#00E091',
+  brandHover: '#00E091',
 }

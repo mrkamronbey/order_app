@@ -1,7 +1,7 @@
 import { ThemeOptions } from '@mui/material/styles/createTheme'
 
 export const typography: ThemeOptions['typography'] = {
-  fontFamily: 'Roboto',
+  fontFamily: 'Poppins',
   fontSize: 14,
   htmlFontSize: 14,
 

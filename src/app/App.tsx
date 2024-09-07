@@ -5,7 +5,7 @@ import { Router } from '@/routers'
 export const App = () => (
   <Provider>
     <BrowserRouter>
-      <Router isAuth />
+      <Router />
     </BrowserRouter>
   </Provider>
 )

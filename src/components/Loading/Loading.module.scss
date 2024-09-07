@@ -1,7 +1,12 @@
 .loading {
-  align-items: center;
   display: flex;
-  height: 100%;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 9999;
 }
